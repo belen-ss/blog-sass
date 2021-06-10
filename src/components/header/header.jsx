@@ -1,6 +1,5 @@
 import React from "react";
 import "./header.sass";
-import Hamburger from "../../images/icon-hamburger.svg";
 
 const Header = () => {
   return (
