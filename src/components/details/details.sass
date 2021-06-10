@@ -17,32 +17,40 @@
     div
       width: 50%
       padding: 8%
-  .design
+  .editor
     display: flex
     flex-direction: row
     height: 100%
-    .design-details
+    .editor-details
       display: flex
       flex-direction: column
       justify-content: center
       width: 50%
       padding: 70px 100px
-    .design-image
+    .editor-image
       width: 50%
       background: url('../../images/illustration-editor-desktop.svg')
       background-size: cover
       background-repeat: no-repeat
+  .desktop
+    display: flex
+    flex-direction: row
+    height: 100%
+    .desktop-details
+      display: flex
+      flex-direction: column
+      justify-content: center
+      width: 50%
+      padding: 70px 100px
     .desktop-image
       width: 50%
-      background: url('../../images/illustration-editor-desktop.svg')
+      background: url('../../images/illustration-laptop-desktop.svg')
       background-size: cover
-      background-position: left top
+      background-position: right top
       background-repeat: no-repeat
-      margin: 30px 0
       color: $white
   .state_art
-    background: url('../../images/bg-pattern-circles.svg') no-repeat, linear-gradient(to right, $dark, $dark-blue)
-    background-position: -60%
+    background: url('../../images/bg-pattern-circles.svg') no-repeat -200px -500px, linear-gradient(to right, $dark, $dark-blue)
     display: flex
     flex-direction: row
     background-color: $dark-blue
@@ -54,9 +62,90 @@
       width: 50%
       display: flex
       align-items: center
+      img
+        z-index: 100
     .state_art-details
       display: flex
       flex-direction: column
       justify-content: center
       padding-right: 130px
       width: 50%
+
+@media only screen and (max-width: 500px)
+  .details-container
+    display: grid
+    grid-template-rows: 80px 900px 750px 800px
+    padding-top: 50px
+    color: $dark-blue
+    width: 100%
+    text-align: center
+    h3
+      font-size: 26px
+    h4
+      font-size: 20px
+      margin: 20px 0
+    p
+      font-size: 16px
+      line-height: 25px
+      div
+        width: 100%
+        padding: 8%
+    .editor
+      display: flex
+      flex-direction: column-reverse
+      width: 100%
+      .editor-details
+        width: auto
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 5px 40px
+      .editor-image
+        width: 100vw
+        background: url('../../images/illustration-editor-mobile.svg')
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        height: 600px
+    .desktop
+      display: flex
+      flex-direction: column
+      width: auto
+      .desktop-details
+        width: auto
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 5px 40px
+      .desktop-image
+        width: 100vw
+        background: url('../../images/illustration-laptop-mobile.svg')
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        height: 300px
+    .state_art
+      background: url('../../images/bg-pattern-circles.svg') no-repeat -200px -500px, linear-gradient(to right, $dark, $dark-blue)
+      display: flex
+      margin-top: 160px
+      flex-direction: column
+      width: 100%
+      justify-content: center
+      .state_art-image
+        padding-left: 20px
+        display: flex
+        align-items: center
+        height:190px
+        width: 100%
+        img
+          width: 380px
+          height: 380px
+          position: relative
+          top: -80px
+          z-index: 100
+      .state_art-details
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 0 20px
+        width: auto

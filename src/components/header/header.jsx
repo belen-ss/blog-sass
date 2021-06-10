@@ -1,18 +1,44 @@
 import React from "react";
 import "./header.sass";
+import Hamburger from "../../images/icon-hamburger.svg";
 
 const Header = () => {
   return (
     <div className="header-container">
-      <div>
-        <h2>Blogr</h2>
-        <a href="/">Product</a>
-        <a href="/">Company</a>
-        <a href="/">Connect</a>
-      </div>
-      <div className="buttons-user">
-        <button>Login</button>
-        <button>Sign Up</button>
+      <h2>Blogr</h2>
+      <input type="checkbox" className="burger" id="" />
+  
+      <div className="buttons-header">
+        <div>
+          <div class="dropdown">
+            <a href="/">Product</a>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="/">Company</a>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="/">Connect</a>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+        </div>
+        <div className="buttons-user">
+          <button>Login</button>
+          <button>Sign Up</button>
+        </div>
       </div>
     </div>
   );
